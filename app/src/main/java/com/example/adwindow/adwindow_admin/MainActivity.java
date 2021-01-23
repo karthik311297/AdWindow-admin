@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Map<String,Object> multiUpdates = new HashMap<>();
                 String key = databaseReference.child("Cities").child(screenCity.getText().toString()).child("screenLocationTitles").push().getKey();
-                multiUpdates.put("/Screens/"+screenTitle.getText().toString(),screen);
+                multiUpdates.put("/Screens/"+screenCity.getText().toString()+"/"+screenTitle.getText().toString(),screen);
                 multiUpdates.put("/Cities/"+screenCity.getText().toString()+"/screenLocationTitles/"+key, screenTitle.getText().toString());
                 databaseReference.updateChildren(multiUpdates)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
