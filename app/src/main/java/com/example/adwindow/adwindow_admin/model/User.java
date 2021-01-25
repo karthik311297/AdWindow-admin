@@ -8,8 +8,6 @@ public class User {
     private String emailId;
     private String companyName;
     private String phoneNumber;
-    private Set<String> advertisedContentId;
-    private Set<String> uploadedContentIds;
 
     public User() {
     }
@@ -19,8 +17,6 @@ public class User {
         this.emailId = emailId;
         this.companyName = companyName;
         this.phoneNumber = phoneNumber;
-        this.advertisedContentId = new HashSet<>();
-        this.uploadedContentIds = new HashSet<>();
     }
 
     public String getUsername() {
@@ -37,13 +33,5 @@ public class User {
 
     public String getPhoneNumber() {
         return phoneNumber;
-    }
-
-    public Set<String> getAdvertisedContentId() {
-        return advertisedContentId;
-    }
-
-    public Set<String> getUploadedContentIds() {
-        return uploadedContentIds;
     }
 }

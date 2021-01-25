@@ -1,22 +1,25 @@
 package com.example.adwindow.adwindow_admin.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Map;
 
 public class Content {
     private String contentId;
     private String contentURL;
     private String uploadedByUser;
-    private List<String> screensUploadedIn;
+
+    private Map<String,Boolean> advertisementsStatus;
+
+    private String contentName;
 
     public Content() {
     }
 
-    public Content(String contentId, String contentURL, String uploadedByUser) {
+    public Content(String contentId, String contentURL, String uploadedByUser,Map<String, Boolean> advertisementsStatus, String contentName) {
         this.contentId = contentId;
         this.contentURL = contentURL;
         this.uploadedByUser = uploadedByUser;
-        this.screensUploadedIn = new ArrayList<>();
+        this.advertisementsStatus = advertisementsStatus;
+        this.contentName = contentName;
     }
 
     public String getContentId() {
@@ -31,7 +34,12 @@ public class Content {
         return uploadedByUser;
     }
 
-    public List<String> getScreensUploadedIn() {
-        return screensUploadedIn;
+    public String getContentName() {
+        return contentName;
     }
+
+    public Map<String, Boolean> getAdvertisementsStatus() {
+        return advertisementsStatus;
+    }
+
 }

@@ -1,17 +1,14 @@
 package com.example.adwindow.adwindow_admin.model;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class Screen {
     String locationName;
     String screenLocationTitle;
     String screenAddress;
     String screenPlaceImageUrl;
-    Map<String, String> runningContentIds;
-    Map<String, String> pendingContentIds;
+    Map<String, String> advertisementsStatus;
     String pricing;
     String footfall;
     int numScreens;
@@ -27,8 +24,7 @@ public class Screen {
         this.pricing = pricing;
         this.footfall = footfall;
         this.numScreens = numScreens;
-        this.runningContentIds = new HashMap<>();
-        this.pendingContentIds = new HashMap<>();
+        this.advertisementsStatus = new HashMap<>();
     }
 
     public String getLocationName() {
@@ -59,11 +55,7 @@ public class Screen {
         return numScreens;
     }
 
-    public Map<String, String> getRunningContentIds() {
-        return runningContentIds;
-    }
-
-    public Map<String, String> getPendingContentIds() {
-        return pendingContentIds;
+    public Map<String, String> getAdvertisementsStatus() {
+        return advertisementsStatus;
     }
 }

@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 EditText screenLocImageUrl = findViewById(R.id.screeLocImageUrl);
 
                 Screen screen = new Screen(screenCity.getText().toString(),screenTitle.getText().toString(),screenAddress.getText().toString(),
-                        screenLocImageUrl.getText().toString(),footfall.getText().toString(),screenpricing.getText().toString(),Integer.parseInt(sNumScreens.getText().toString()));
+                        screenLocImageUrl.getText().toString(),screenpricing.getText().toString(),footfall.getText().toString(),Integer.parseInt(sNumScreens.getText().toString()));
 
                 Map<String,Object> multiUpdates = new HashMap<>();
                 String key = databaseReference.child("Cities").child(screenCity.getText().toString()).child("screenLocationTitles").push().getKey();
