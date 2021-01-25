@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class User {
-    private String username;
+    private String userUid;
     private String emailId;
     private String companyName;
     private String phoneNumber;
@@ -12,15 +12,11 @@ public class User {
     public User() {
     }
 
-    public User(String username, String emailId, String companyName, String phoneNumber) {
-        this.username = username;
+    public User(String userUid, String emailId, String companyName, String phoneNumber) {
+        this.userUid = userUid;
         this.emailId = emailId;
         this.companyName = companyName;
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getUsername() {
-        return username;
     }
 
     public String getEmailId() {
@@ -33,5 +29,9 @@ public class User {
 
     public String getPhoneNumber() {
         return phoneNumber;
+    }
+
+    public String getUserUid() {
+        return userUid;
     }
 }
